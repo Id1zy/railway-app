@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/railway-app/static/css/main.d8c7cdb9.css",
+    "main.js": "/railway-app/static/js/main.8cb21ced.js",
+    "static/media/left_2.svg": "/railway-app/static/media/left_2.ad2fcdac99ee4b2f8141d0be452501d6.svg",
+    "static/media/right.svg": "/railway-app/static/media/right.8e1ce1d9363c923220e051a3b446a762.svg",
+    "static/media/right_2.svg": "/railway-app/static/media/right_2.fbe9c7d5bdacf882e0fa9c6da5ad97fa.svg",
+    "static/media/down.svg": "/railway-app/static/media/down.b35f034bf25e34ab73f85c1f073a8efc.svg",
+    "index.html": "/railway-app/index.html",
+    "static/media/up.svg": "/railway-app/static/media/up.573003241ce95602e096488f8fecaeb8.svg",
+    "static/media/bubble.svg": "/railway-app/static/media/bubble.21df03b7bcd819b0a5e68ae7edc384ef.svg",
+    "static/media/barra.svg": "/railway-app/static/media/barra.81b9ccb3028f3e54e48b51e0c247342e.svg",
+    "static/media/ProfileImg.svg": "/railway-app/static/media/ProfileImg.ef7d946a4a70aac4a2ba97c2ca583536.svg",
+    "main.d8c7cdb9.css.map": "/railway-app/static/css/main.d8c7cdb9.css.map",
+    "main.8cb21ced.js.map": "/railway-app/static/js/main.8cb21ced.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d8c7cdb9.css",
+    "static/js/main.8cb21ced.js"
+  ]
+}
