@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shadow-tech-inner{
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.603);
+}
+
+.shadow-tech-outer{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
+}
+.no-active{
+    @apply  block rounded-2xl px-4 py-1.5 text-blue font-medium text-sm
+}
+
+.no-active:hover{
+    @apply bg-blue text-white
+}
+
+.active{
+    box-shadow: #144E7E 0px 50px 100px -20px, #144E7E 0px 30px 60px -30px, #144E7E 0px -2px 6px 0px inset;
+}
+.active{
+    @apply  bg-blue text-white 
+}
+
+
+
+.navlink_tech{
+    box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
+   
+    z-index: 10;
+}
+
+
+.button_tech {
+    @apply inline-block flex justify-center items-center text-center rounded-full bg-blue px-6 pb-1.5 pt-1.5 text-sm font-semibold  leading-normal text-white  
+}
+
+
+  .button_tech:hover {
+    @apply  bg-dark-blue
+  }
+
+  .button_tech_2{
+    @apply block flex justify-center items-center text-center rounded bg-blue px-12 py-2 text-sm font-semibold text-white shadow   
+  }
+
+  .button_tech_2:hover{
+    @apply  bg-dark-blue
+  }
+
+  .button_tech_2:focus{
+    @apply  outline-none ring
+  }
+  .button_tech_2:active{
+    @apply  bg-light-blue-2
+  }
+
+  .button_tech_4{
+    @apply   inline-flex justify-center items-center rounded-full bg-blue px-4 py-2 text-base font-medium text-white 
+  }
+
+  .button_tech_4:hover{
+    @apply  bg-dark-blue
+  }
+
+  .button_tech_4:focus{
+    @apply  outline-none ring
+  }
+  .button_tech_4:active{
+    @apply  bg-light-blue-2
+  }
+
+  .button_tech_colorless{
+    @apply   inline-flex inline-block flex justify-center items-center text-center rounded-full px-6 pb-1.5 pt-1.5 text-sm font-semibold  leading-normal text-white
+  }
+
+  .button_tech_3{
+    @apply block w-full rounded border-2 border-blue bg-white px-12 py-3 text-sm font-semibold text-blue shadow  sm:w-auto
+  }
+
+  .button_tech_3:hover{
+    @apply  text-dark-blue
+  }
+
+  .button_tech_3:focus{
+    @apply  outline-none ring
+  }
+  .button_tech_3:active{
+    @apply  text-light-blue-2
+  }
+
+  .button_tech_5{
+    @apply   inline-flex justify-center items-center rounded-full px-4 py-2 text-base font-medium text-white 
+  }
+
+  .button_tech_5:hover{
+    @apply  bg-dark-blue
+  }
+
+  .button_tech_5:focus{
+    @apply  outline-none ring
+  }
+  .button_tech_5:active{
+    @apply  bg-light-blue-2
+  }
+
+  .line-tech{
+    @apply border-b-4  border-blue  sm:border-l-4 sm:border-b-0 
+  }
+
+  .shadow-bg{
+    box-shadow: 0px 1000px 50px 0px rgba(0, 0, 0, 0.50) inset; 
+  }
+
+  .input_tech_search{
+    border-radius: 6px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  }
+  .input_tech_search::placeholder {
+    @apply text-admin-green font-semibold
+  }
+  .input_tech_search:focus{
+    border-radius: 6px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  }
+  .input_tech_search{
+    @apply block w-full pl-2 text-sm  border-none font-bold py-2
+  }
+
+  .input_tech_search:foucs{
+    @apply border-blue
+  }
+
+  .input_tech_search_colorless{
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  }
+  .input_tech_search_colorless::placeholder {
+    @apply  font-semibold
+  }
+  .input_tech_search_colorless:focus{
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  }
+  .input_tech_search_colorless{
+    @apply block w-full pl-10 text-sm border-none font-bold
+  }
+
+  .input_tech_search_colorless:foucs{
+    @apply border-blue
+  }
+
+
+  .input_tech_search_colorless_2{
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  }
+  .input_tech_search_colorless_2::placeholder {
+    @apply  font-semibold
+  }
+  .input_tech_search_colorless_2:focus{
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  }
+  .input_tech_search_colorless_2{
+    @apply block w-full pl-3 text-sm  font-bold
+  }
+
+  .input_tech_search_colorless_2:focus{
+    @apply ring-offset-2 ring-2  ring-offset-2 
+  }
+
+  .input-tech{
+    border-radius: 10px;
+background: #FFF;
+box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, -4px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  }
+
+  .input-tech{
+    @apply block w-full text-sm text-blue  font-bold
+  }
+
+  .input-tech:focus{
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset, -4px -4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  }
+
+  .input-tech:foucs{
+    @apply border-blue
+  }
+  .input-tech::placeholder {
+    @apply text-blue font-normal
+  }
+
+  .mio {
+    
+    width: 140px;
+    height: 20px;
+    flex-direction: column;
+    flex-shrink: 0;
+    text-align: right;
+    
+  }
+
+
+  
+
+
+  .bg-tech{
+background: url(https://img.freepik.com/free-photo/school-is-closed-due-covid19-pandemic_637285-8841.jpg?w=740&t=st=1692591728~exp=1692592328~hmac=fd2fcbdef650d9a9a7dbee90adc1a018a78f37f503f6a6cff62d90a12d1eefb0), lightgray 50%;
+box-shadow: 0px 1000px 50px 0px rgba(0, 0, 0, 0.50) inset;
+background-size: cover;
+background-repeat: no-repeat;
+color: #FFF;
+font-family: Roboto;
+font-size: 40px;
+font-style: normal;
+font-weight: 900;
+line-height: normal; 
+  }
+
+
+body, #root{
+  @apply flex flex-col min-h-full overflow-scroll
+}

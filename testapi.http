@@ -1,0 +1,6 @@
+
+GET http://127.0.0.1:8000/api/student_attendance/student_subject_absences/2/ HTTP/1.1
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAwNjA5ODU5LCJpYXQiOjE3MDAwMDUwNTksImp0aSI6IjNmZDcyOTU1YWFiOTQwNmU5MTExZTE4M2E4MDE3OTZhIiwidXNlcl9pZCI6MzgsInJvbCI6ImVzdHVkaWFudGUiLCJlbWFpbCI6InNvZmlhQGVzdHVkaWFudGUuY2wiLCJpc19zdGFmZiI6ZmFsc2V9.A81JihhpmfKb8igcPtcLQebCL4GUX5EYB1NoO3P-Vnk
+
+//obtener informacion del estudiante getStudent
+//obtener 

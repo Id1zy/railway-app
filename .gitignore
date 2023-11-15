@@ -1,0 +1,41 @@
+node_modules
+/frontend_react/node_modules
+/frontend_react/package.json
+/frontend_react/package-lock.json
+package.json
+package-lock.json
+__pycache__
+/backend/settings.py
+frontend_react/package-lock.json
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media
+frontend_react/package-lock.json
+.env
+frontend_react/.env
+backend/.env
+*.env
+*.json
+
+
+### Django.Python Stack ###
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+### react ###
+.DS_*
+logs
+**/*.backup.*
+**/*.back.*
+
+bower_components

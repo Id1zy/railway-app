@@ -1,0 +1,56 @@
+import { Progress } from "@material-tailwind/react";
+ 
+export function ProgressVariants() {
+  return (
+    <div className="flex w-full flex-col gap-4">
+      <Progress value={50} variant="filled" />
+      <Progress value={50} variant="gradient" />
+    </div>
+  );
+}
+
+import { Progress } from "@material-tailwind/react";
+ 
+export function ProgressColors() {
+  return (
+    <div className="flex w-full flex-col gap-4">
+      <Progress value={50} color="blue" />
+      <Progress value={50} color="red" />
+      <Progress value={50} color="green" />
+      <Progress value={50} color="amber" />
+      <Progress value={50} color="teal" />
+      <Progress value={50} color="indigo" />
+      <Progress value={50} color="purple" />
+      <Progress value={50} color="pink" />
+    </div>
+  );
+}
+import { Progress } from "@material-tailwind/react";
+ 
+export function ProgressSizesLabel() {
+  return (
+    <div className="flex w-full flex-col gap-4">
+      <Progress value={25} size="sm" label="Small" />
+      <Progress value={50} size="md" label="Medium" />
+      <Progress value={75} size="lg" label="Large" />
+    </div>
+  );
+}
+
+import { Progress, Typography } from "@material-tailwind/react";
+ 
+export function ProgressLabelOutside() {
+  return (
+    <div className="w-full">
+      <div className="mb-2 flex items-center justify-between gap-4">
+        <Typography color="blue-gray" variant="h6">
+          Completed
+        </Typography>
+        <Typography color="blue-gray" variant="h6">
+          50%
+        </Typography>
+      </div>
+      <Progress value={50} />
+    </div>
+  );
+}

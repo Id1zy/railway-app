@@ -1,0 +1,374 @@
+import { Radio } from "@material-tailwind/react";
+ 
+export function RadioColors() {
+  return (
+    <div className="flex w-max gap-4">
+      <Radio name="color" color="blue" defaultChecked />
+      <Radio name="color" color="red" />
+      <Radio name="color" color="green" />
+      <Radio name="color" color="amber" />
+      <Radio name="color" color="teal" />
+      <Radio name="color" color="indigo" />
+      <Radio name="color" color="purple" />
+      <Radio name="color" color="pink" />
+    </div>
+  );
+}
+
+import { Radio } from "@material-tailwind/react";
+ 
+export function RadioCustomIcon() {
+  return (
+    <>
+      <Radio
+        name="type"
+        label="HTML"
+        icon={
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-3 w-3"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+              clipRule="evenodd"
+            />
+          </svg>
+        }
+      />
+      <Radio
+        name="type"
+        label="React"
+        icon={
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-3 w-3"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+              clipRule="evenodd"
+            />
+          </svg>
+        }
+        defaultChecked
+      />
+    </>
+  );
+}
+
+import { Radio } from "@material-tailwind/react";
+ 
+export function RadioDisabled() {
+  return (
+    <div className="flex gap-10">
+      <Radio name="type" label="HTML" disabled />
+      <Radio name="type" label="React" disabled defaultChecked />
+    </div>
+  );
+}
+
+
+import { Radio, Typography } from "@material-tailwind/react";
+ 
+export function RadioWithLink() {
+  return (
+    <div className="flex flex-col gap-2">
+      <Radio
+        name="terms"
+        label={
+          <Typography color="blue-gray" className="flex font-medium">
+            I agree with HTML
+            <Typography
+              as="a"
+              href="#"
+              color="blue"
+              className="font-medium transition-colors hover:text-blue-700"
+            >
+              &nbsp;terms and conditions
+            </Typography>
+            .
+          </Typography>
+        }
+      />
+      <Radio
+        name="terms"
+        label={
+          <Typography color="blue-gray" className="flex font-medium">
+            I agree with React
+            <Typography
+              as="a"
+              href="#"
+              color="blue"
+              className="font-medium transition-colors hover:text-blue-700"
+            >
+              &nbsp;terms and conditions
+            </Typography>
+            .
+          </Typography>
+        }
+      />
+    </div>
+  );
+}
+
+
+import { Radio, Typography } from "@material-tailwind/react";
+ 
+export function RadioWithDescription() {
+  return (
+    <div className="flex flex-col gap-8">
+      <Radio
+        name="description"
+        label={
+          <div>
+            <Typography color="blue-gray" className="font-medium">
+              HTML Version
+            </Typography>
+            <Typography variant="small" color="gray" className="font-normal">
+              @material-tailwind/html, packed with rich components and widgets.
+            </Typography>
+          </div>
+        }
+        containerProps={{
+          className: "-mt-5",
+        }}
+      />
+      <Radio
+        name="description"
+        label={
+          <div>
+            <Typography color="blue-gray" className="font-medium">
+              React Version
+            </Typography>
+            <Typography variant="small" color="gray" className="font-normal">
+              @material-tailwind/react, packed with rich components and widgets.
+            </Typography>
+          </div>
+        }
+        containerProps={{
+          className: "-mt-5",
+        }}
+      />
+    </div>
+  );
+}
+
+
+import {
+  Radio,
+  Card,
+  List,
+  ListItem,
+  ListItemPrefix,
+  Typography,
+} from "@material-tailwind/react";
+ 
+export function RadioVerticalList() {
+  return (
+    <Card>
+      <List>
+        <ListItem className="p-0">
+          <label
+            htmlFor="vertical-list-react"
+            className="flex w-full cursor-pointer items-center px-3 py-2"
+          >
+            <ListItemPrefix className="mr-3">
+              <Radio
+                name="vertical-list"
+                id="vertical-list-react"
+                ripple={false}
+                className="hover:before:opacity-0"
+                containerProps={{
+                  className: "p-0",
+                }}
+              />
+            </ListItemPrefix>
+            <Typography color="blue-gray" className="font-medium">
+              React.js
+            </Typography>
+          </label>
+        </ListItem>
+        <ListItem className="p-0">
+          <label
+            htmlFor="vertical-list-vue"
+            className="flex w-full cursor-pointer items-center px-3 py-2"
+          >
+            <ListItemPrefix className="mr-3">
+              <Radio
+                name="vertical-list"
+                id="vertical-list-vue"
+                ripple={false}
+                className="hover:before:opacity-0"
+                containerProps={{
+                  className: "p-0",
+                }}
+              />
+            </ListItemPrefix>
+            <Typography color="blue-gray" className="font-medium">
+              Vue.js
+            </Typography>
+          </label>
+        </ListItem>
+        <ListItem className="p-0">
+          <label
+            htmlFor="vertical-list-svelte"
+            className="flex w-full cursor-pointer items-center px-3 py-2"
+          >
+            <ListItemPrefix className="mr-3">
+              <Radio
+                name="vertical-list"
+                id="vertical-list-svelte"
+                ripple={false}
+                className="hover:before:opacity-0"
+                containerProps={{
+                  className: "p-0",
+                }}
+              />
+            </ListItemPrefix>
+            <Typography color="blue-gray" className="font-medium">
+              Svelte.js
+            </Typography>
+          </label>
+        </ListItem>
+      </List>
+    </Card>
+  );
+}
+
+
+import {
+  Radio,
+  Card,
+  List,
+  ListItem,
+  ListItemPrefix,
+  Typography,
+} from "@material-tailwind/react";
+ 
+export function RadioHorizontalList() {
+  return (
+    <Card className="w-full max-w-[24rem]">
+      <List className="flex-row">
+        <ListItem className="p-0">
+          <label
+            htmlFor="horizontal-list-react"
+            className="flex w-full cursor-pointer items-center px-3 py-2"
+          >
+            <ListItemPrefix className="mr-3">
+              <Radio
+                name="horizontal-list"
+                id="horizontal-list-react"
+                ripple={false}
+                className="hover:before:opacity-0"
+                containerProps={{
+                  className: "p-0",
+                }}
+              />
+            </ListItemPrefix>
+            <Typography color="blue-gray" className="font-medium">
+              React.js
+            </Typography>
+          </label>
+        </ListItem>
+        <ListItem className="p-0">
+          <label
+            htmlFor="horizontal-list-vue"
+            className="flex w-full cursor-pointer items-center px-3 py-2"
+          >
+            <ListItemPrefix className="mr-3">
+              <Radio
+                name="horizontal-list"
+                id="horizontal-list-vue"
+                ripple={false}
+                className="hover:before:opacity-0"
+                containerProps={{
+                  className: "p-0",
+                }}
+              />
+            </ListItemPrefix>
+            <Typography color="blue-gray" className="font-medium">
+              Vue.js
+            </Typography>
+          </label>
+        </ListItem>
+        <ListItem className="p-0">
+          <label
+            htmlFor="horizontal-list-svelte"
+            className="flex w-full cursor-pointer items-center px-3 py-2"
+          >
+            <ListItemPrefix className="mr-3">
+              <Radio
+                name="horizontal-list"
+                id="horizontal-list-svelte"
+                ripple={false}
+                className="hover:before:opacity-0"
+                containerProps={{
+                  className: "p-0",
+                }}
+              />
+            </ListItemPrefix>
+            <Typography color="blue-gray" className="font-medium">
+              Svelte.js
+            </Typography>
+          </label>
+        </ListItem>
+      </List>
+    </Card>
+  );
+}
+
+
+
+import { Radio, Typography } from "@material-tailwind/react";
+ 
+function Icon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="h-full w-full scale-105"
+    >
+      <path
+        fillRule="evenodd"
+        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+}
+ 
+export function RadioCustomStyles() {
+  return (
+    <div className="flex gap-10">
+      <Radio
+        name="type"
+        ripple={false}
+        icon={<Icon />}
+        className="border-gray-900/10 bg-gray-900/5 p-0 transition-all hover:before:opacity-0"
+        label={
+          <Typography color="blue-gray" className="font-normal">
+            Premium
+          </Typography>
+        }
+      />
+      <Radio
+        name="type"
+        defaultChecked
+        ripple={false}
+        icon={<Icon />}
+        className="border-gray-900/10 bg-gray-900/5 p-0 transition-all hover:before:opacity-0"
+        label={
+          <Typography color="blue-gray" className="font-normal">
+            Free
+          </Typography>
+        }
+      />
+    </div>
+  );
+}

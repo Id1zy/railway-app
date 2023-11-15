@@ -1,0 +1,3 @@
+
+GET http://127.0.0.1:8000/api/seccion/secciones-infUTP/15/ HTTP/1.1
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk3OTkzMzM5LCJpYXQiOjE2OTczODg1MzksImp0aSI6ImY4YzA1N2QzZjlmNDQ2NzViN2IzYjVhZTQ5MTY4NTRjIiwidXNlcl9pZCI6OSwicm9sIjoiVVRQIiwiZW1haWwiOiIxcm9vdEByb290LmNsIiwiaXNfc3RhZmYiOnRydWV9.njgoiEN3TM_4SF93VOyHxZrbki-MuzbJ6tueNN8kzZA

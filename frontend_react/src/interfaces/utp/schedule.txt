@@ -1,0 +1,125 @@
+import React, { useEffect, useState } from 'react';
+import { UserCircleIcon, Cog6ToothIcon, ArrowLeftOnRectangleIcon } from '@heroicons/react/24/outline';
+import PageUser from "../../hocs/layouts/PageUser";
+import SideBar from "../../components/users/sidebar";
+import { utp_maps } from "../../helpers/users_helpers";
+import PageHeading from "../../components/heros/pageHeading";
+import axios from 'axios';
+import { TableSchedule } from '../../components/admin/tables/tableSchedule';
+import CreateScheduleForm from '../../components/heros/scheduleCreateForm';
+
+
+
+
+const SchedulePage = ({ user }) => {
+  const [users,userData, setUserData] = useState('');
+  const [schedules, setSchedules] = useState([]);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [newSchedule, setNewSchedule] = useState({
+    day_of_week: '',
+    start_time: '',
+    end_time: '',
+    course: '',
+    subject: '',
+  });
+
+  useEffect(() => {
+    if (user) {
+      setUserData(user);
+    }
+
+    axios.get("http://localhost:8000/api/schedule/schedules/")
+        .then(response => setSchedules(response.data.results))
+        .catch(error => console.log(error));
+  }, [user]);
+
+  console.log();
+
+  
+  const handleCreateSchedule = () => {
+    axios.post("http://localhost:8000/api/schedule/schedules/", {
+      ...newSchedule,
+      user: user, // Asegúrate de que el campo y el nombre sean los correctos
+    })
+      .then(response => {
+        console.log('Respuesta exitosa:', response.data.results);
+        // Abre el modal después de que la solicitud es exitosa
+        setModalIsOpen(true);
+        // Actualiza el estado con los nuevos horarios
+        setNewSchedule(response.data.results);
+      })
+      .catch(error => {
+        console.error('Error al crear el horario:', error);
+      });
+  };
+
+
+
+  return (
+    <PageUser color={'bg-white text-blue'} colorInput={'bg-white text-blue'}>
+      <SideBar color={'bg-blue'} userData={userData} useRol="UTP" mapeo={utp_maps}>
+        <div className="w-full md:w-4/5 bg-fondo p-4 h-full shadow-md">
+          <div className="mx-auto max-w-7xl mt-4">
+            <div className="mb-5">
+              
+              <PageHeading
+                colorText={'text-grey text-center md:text-left pl-[70px] md:pl-0'}
+                colorButton={'invisible bg-admin-black'}
+                border={'border-admin-green my-0'}
+                title='Horarios UTP'
+                button='Activo'
+              />
+              
+              <div className='bg-white border-l-[10px] border-blue rounded-[20px] p-3'>
+                <div className="grid grid-cols-span-1 sm:grid-cols-2 gap-4 text-left">
+                  <div className='grid col-span-2 text-left'>
+                    <p className='text-xl3 text-blue font-bold text-left px-1'>{userData.get_full_name}</p>
+                    <p className='text-xl3 text-blue font-bold'>Curso</p>
+                </div>
+                </div>
+                </div>
+            </div>
+           
+            {/* Schedule Table */}
+            <div className="bg-white border-l-[10px] border-blue rounded-[20px] p-3 shadow-md">
+              <div className="flex justify-between items-center mb-2">
+                <h2 className="text-2xl font-bold text-blue">Horarios</h2>
+                <button onClick={handleCreateSchedule} className="px-3 py-1 bg-blue text-white rounded">Agregar Horario</button>
+              </div>
+              <table className="w-full table-auto">
+                <thead>
+                  <tr className="bg-blue text-white">
+                    <th className="px-4 py-2">Día de la semana</th>
+                    <th className="px-4 py-2">Hora de inicio</th>
+                    <th className="px-4 py-2">Hora de fin</th>
+                    <th className="px-4 py-2">Seccion</th>
+                    <th className="px-4 py-2">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+               {schedules.map(schedule => ( 
+                    <tr key={schedule.id} className="bg-gray-100 border-b border-gray-300">
+                      <td className="px-4 py-2 text-blue font-semibold text-center">{schedule.day_of_week}</td>
+                      <td className="px-4 py-2 text-center">{schedule.start_time_block}</td>
+                      <td className="px-4 py-2 text-center">{schedule.end_time_block}</td>
+                      <td className="px-4 py-2 text-center">{schedule.section} </td>
+
+                      <td className="px-4 py-2 text-right">
+                        <button className="px-3 py-1 mx-1 bg-blue text-white rounded">Editar</button>
+                        <button className="px-3 py-1 mx-1 bg-red-500 text-white rounded">Eliminar</button>
+                      </td>
+                      
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {modalIsOpen && <CreateScheduleForm />}
+          </div>
+        </div>
+      </SideBar>
+    </PageUser>
+  );
+};
+
+export default SchedulePage;

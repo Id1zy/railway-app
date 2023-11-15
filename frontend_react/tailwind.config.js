@@ -1,0 +1,190 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: ['class', '[data-mode="dark"]'],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  
+  theme: {
+    extend: {
+      colors:{
+        'gray':'#999999',
+        'UTP-bg':"#E6EAF1",
+        'UTP-comp': "#FFFFFF",
+        'UTP-des': "#1B639F",
+        'UTP-combg': "#D0DCE6",
+        'blue': "#1B639F",
+        'dark-blue': "#144E7E",
+        'light-blue': "#2172B6",
+        'light-blue-2': "#5094AF",
+        'background-blue':"#e5ecff",
+        'deep-blue':'#144E7E',
+        'green':"#25FFC5",
+        'background-green': "#28de68",
+        'light-green':"#4AD0AD",
+        'deep-green':"#40B194",
+        'gray': "#1D284A",
+        'light-gray':"#26335D",
+        'fondo':"#E6EAF1",
+        'deep-red':'#B80D48',
+        'deep-red-2':'#880934',
+        'orange':'#F29724',
+        'background-orange': '#ff6934',
+        'blue-800': '#1E40AF',
+        'deep-orange':'#D08424',
+        'admin':{
+          'black': '#050714',
+          'background': '#141837',
+          'input': '#0F132F',
+          'green':'#0A9381',
+          'red': '#db092e',
+          'blue':'#044094',
+        },
+        'new':{
+          'blue':'#3678f3',
+          'hblue':'#2865D7',
+          'dark-blue':'#136dac',
+          'green':'#0fb37e',
+          'hgreen':'#0D8E65',
+          'dark-green':'#067d88',
+          'red':'#d50a40',
+          'hred':'#B60E3B',
+          'dark-red':'#a00830',
+          'green2':'#0d647f',
+          'dark-green2':'#0a4b5f',
+          'yellow': '#FAD13C',
+          'hyellow':'#E7C13A',
+          'pink': '#f04f9f',
+          'hpink':'#E54A97',
+          'greenblue': '#3bb1ae',
+          'fondo': '#f9fafb',
+          'red': '#ff4a70',
+          'purple': '#bb6bfb',
+          'hpurple':'#A256DF',
+        },
+        'pink':{
+          50:"#fdb7fe",
+          100:"#eaa5f1",
+          200:"#d38fdf",
+          300:"#b97acd",
+          400:"#a96bc2",
+          500:"#9458b3",
+          600:"#8b51ab",
+          700:"#7f44a3",
+          800:"#743b9c",
+        },
+        'pink':{
+          50:"#fdb7fe",
+          100:"#eaa5f1",
+          200:"#d38fdf",
+          300:"#b97acd",
+          400:"#a96bc2",
+          500:"#9458b3",
+          600:"#8b51ab",
+          700:"#7f44a3",
+          800:"#743b9c",
+        },
+        'red': {
+          50: "#ffe3e3",
+          100: "#ffbdbd",
+          200: "#ff9b9b",
+          300: "#f86a6a",
+          400: "#ef4e4e",
+          500: "#e12d39",
+          600: "#cf1124",
+          700: "#ab091e",
+          800: "#8a041a",
+          900: "#610316",
+        },
+        'green': {
+          50: "#e3fcec",
+          100: "#c1f4d0",
+          200: "#8de2a1",
+          300: "#5fb671",
+          400: "#3f9d4d",
+          500: "#2ea043",
+          600: "#1f7d2e",
+          700: "#0e6522",
+          800: "#044317",
+          900: "#022d0d",
+        },
+      },
+      keyframes:{
+        wiggle:{
+          "0%, 100%": {transform: "rotate(-3deg)"},
+          "50%":{transform: "rotate(3deg)"},
+        },
+        click:{
+          "0%, 100%": {transform: "scale(0.95)"},
+          "80%":{transform: "scale(0.95)"},
+        },
+        card:{
+          "0%, 100%": {transform: "scale(1.01)"},
+          "80%":{transform: "scale(1.01)"},
+        },
+      },
+      animation:{
+        wiggle: "wiggle 200ms ease-in-out",
+        click: "click 10000ms ease-in-out",
+        card: "card 10000ms ease-in-out",
+      },
+    },
+    fontFamily:{},
+    fontSize:{
+      xs:".75rem",
+      sm:".875rem",
+      tiny:".875rem",
+      base:"1rem",
+      lg:"1.12rem",
+      xl:"1.25rem",
+      xl2:"1.5rem",
+      xl3:"2rem",
+    },
+    boxShadow:{
+      xs:"0 25px 50px 3px rgba(0,0,0,0.05), 0 1px 2px 0 rgba(0,0,0,0.04)",
+      DEFAULT:"0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.06)",
+      fb:"0 2px 2px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06)",
+      md:"0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06)",
+      button:"0 0px 10px 1px rgba(0,0,0,0.2), 0 0px 2px 0px rgba(0,0,0,0.05)",
+      card:"0 0px 10px 1px rgba(0,0,0,0.06), 0 0px 2px 0px rgba(0,0,0,0.05)",
+      inner:"inset 0 2px 4px 0 rgba(0,0,0,0.06)",
+      none:"none",
+    },
+    screens:{
+      sm:"760px",
+      // @media (min-width: 640px) {...}
+      md:"950px",
+      // @media (min-width: 768px) {...}
+      lg:"1034px",
+      // @media (min-width: 1024px) {...}
+      xl:"1218px",
+      // @media (min-width: 1280px) {...}
+      "2x1":"1536px",
+      // @media (min-width: 1536px) {...}
+      "3x1":"1720px",
+      // @media (min-width: 1720px) {...}
+      "4x1":"1856px",
+      // @media (min-width: 1536px) {...}
+    }
+  },
+  variants:{
+    extend:{
+      backgroundOpacity: ["dark"],
+      display: ["group-hover"],
+      transform: ["group-hover"],
+      scale: ["group-hover"],
+      textOpacity: ["dark"],
+      outline: ["responsive","focus", "hover", "active"],
+
+    }
+  },
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
+    require("tailwindcss-question-mark"),
+    require("tailwind-scrollbar-hide"),
+    
+  ],
+}
+
